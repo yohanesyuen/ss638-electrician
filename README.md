@@ -47,6 +47,33 @@ The skill activates when you ask about:
 
 ---
 
+## Install on Claude.ai (web/desktop chat)
+
+Claude.ai supports custom **Skills** (Settings → Capabilities → Skills) that use the same `SKILL.md` + reference-file format as Claude Code. You upload the skill as a folder/zip rather than installing via CLI.
+
+### Prerequisites
+
+- A Claude.ai Pro, Max, Team, or Enterprise plan (Skills must be enabled under Settings → Capabilities)
+
+### Steps
+
+1. Clone this repository (or download it as a zip):
+   ```bash
+   git clone https://github.com/yuenweiping/ss638-electrician.git
+   cd ss638-electrician
+   ```
+
+2. Zip the contents of the `claude/` folder (not the repo root — the zip should contain `SKILL.md` at its top level, alongside the `references/` folder):
+   ```bash
+   cd claude && zip -r ../ss638-electrician-skill.zip . && cd ..
+   ```
+
+3. In Claude.ai, go to **Settings → Capabilities → Skills → Upload skill**, and upload `ss638-electrician-skill.zip`.
+
+4. Enable the skill, then start a new chat and ask any question about Singapore electrical installations — the skill triggers automatically based on its `description` in `SKILL.md`.
+
+---
+
 ## Install on ChatGPT (Custom GPT)
 
 ### Prerequisites
@@ -93,7 +120,7 @@ ss638-electrician/
     └── system-prompt.md               ← Flattened system prompt for Custom GPT
 ```
 
-The Claude skill uses a modular approach: the main `SKILL.md` loads reference files on demand, keeping the base context small. The ChatGPT system prompt inlines all content since Custom GPTs do not support dynamic file loading.
+The Claude skill uses a modular approach: the main `SKILL.md` loads reference files on demand, keeping the base context small. The `claude/` folder is used as-is for both Claude Code (`claude skill install claude/`) and Claude.ai web/desktop chat (zip `claude/` and upload via Settings → Capabilities → Skills). The ChatGPT system prompt inlines all content since Custom GPTs do not support dynamic file loading.
 
 ---
 
