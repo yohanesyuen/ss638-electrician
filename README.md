@@ -68,6 +68,8 @@ Claude.ai supports custom **Skills** (Settings → Capabilities → Skills) that
    cd claude && zip -r ../ss638-electrician-skill.zip . && cd ..
    ```
 
+   A prebuilt copy is also checked into [`dist/ss638-electrician-skill.zip`](dist/ss638-electrician-skill.zip) — see [`INSTALL_PROMPT.md`](INSTALL_PROMPT.md) for a ready-to-paste prompt that has Claude download and install it for you.
+
 3. In Claude.ai, go to **Settings → Capabilities → Skills → Upload skill**, and upload `ss638-electrician-skill.zip`.
 
 4. Enable the skill, then start a new chat and ask any question about Singapore electrical installations — the skill triggers automatically based on its `description` in `SKILL.md`.

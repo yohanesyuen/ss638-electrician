@@ -5,8 +5,8 @@ Paste the text below into a new Claude.ai chat (or a project's custom instructio
 ---
 
 ```
-Install the "SS 638 Electrician" skill from this release asset:
-https://github.com/yohanesyuen/ss638-electrician/releases/latest/download/ss638-electrician-skill.zip
+Install the "SS 638 Electrician" skill from this repo:
+https://github.com/yohanesyuen/ss638-electrician/raw/main/dist/ss638-electrician-skill.zip
 
 This is a Claude Skill (SKILL.md + a references/ folder) covering Singapore's
 SS 638:2018+C1:2020+A1:2022 Code of Practice for Electrical Installations.
